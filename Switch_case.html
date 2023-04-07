@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num" >
+<button type="button" onclick="tinh()" >Tính số ngày</button> <br>
+<h4 id="hien"></h4>
+</body>
+</html>
+<script>
+
+function tinh(){
+    let number = document.getElementById("num");
+    number = parseInt(number.value);
+    let hien = document.getElementById("hien");
+
+    switch (number){
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        hien.innerText= "Tháng "+ number + " có 31 ngày!";
+         break;
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+          hien.innerText= "Tháng "+ number + " có 30 ngày!";
+          break;
+        default: hien.innerText= "Tháng "+ number + " có 28 hoặc 29 ngày!";
+            break;
+
+    }
+
+}
+</script>
